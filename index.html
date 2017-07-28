@@ -5,6 +5,7 @@
 	<style>
 		body{
 			margin:none;
+			transition: all 0.2s ease-in-out;
 		}
 
 		img {
@@ -56,14 +57,14 @@
 		function draw(){
 			ctx.clearRect(0, 0, canvas.width, canvas.height);
 			var randomColor = '#'+ Math.random().toString(16).slice(-6);
-			ctx.fillStyle = randomColor;
-			ctx.fillRect(0, 0, canvas.width, canvas.height);
 			document.body.style.backgroundColor = randomColor;
 
 			ctx.drawImage(t1, 0, 0 , 83.5, 83.5);
 			ctx.drawImage(t2, 81, 0, 83.5, 83.5);
 			ctx.drawImage(b1, 0, 81, 83.5, 166.5);
 			ctx.drawImage(b2, 81, 81, 83.5, 166.5);
+
+			console.log("code: " + t1.src[42] + t1.src[43] + t1.src[44] + t2.src[42] + t2.src[43] + t2.src[44] + b1.src[42] + b1.src[43] + b1.src[44] + b2.src[42] + b2.src[43] + b2.src[44]);
 
 			//give new sources
 			t1.src = "t (" + (Math.floor(Math.random() * 144) + 1)+ ").png";
