@@ -8,17 +8,12 @@
 			transition: all 0.2s ease-in-out;
 		}
 
-		img {
-			margin-right: -7px;
-			margin-bottom: -7px;
-		}
-
 		#center {
 			position: absolute;
 			top:50%;
 			left: 50%;
-			margin-left: -83.5px;
-			margin-top: -125px;
+			margin-left: -167px;
+			margin-top: -250px;
 		}
 
 		a {
@@ -32,12 +27,12 @@
 </head>
 <body>
 <a onClick="draw()">
-<img id="t1" height="83.5px" width="83.5px" src="" hidden>
-<img id="t2" height="83.5px" width="83.5px" src="" hidden><br>
-<img id="b1" height="166.5px" width="83.5px" src="" hidden>
-<img id="b2" height="166.5px" width="83.5px" src="" hidden>
+<img id="t1" height="167px" width="167px" src="" hidden>
+<img id="t2" height="167px" width="167px" src="" hidden><br>
+<img id="b1" height="333px" width="167px" src="" hidden>
+<img id="b2" height="333px" width="167px" src="" hidden>
 <div id="center">
-	<canvas width="167.5px" height="250px" id="canvas"></canvas>
+	<canvas width="334px" height="500px" id="canvas"></canvas>
 </div>
 </a>
 
@@ -59,10 +54,10 @@
 			var randomColor = '#'+ Math.random().toString(16).slice(-6);
 			document.body.style.backgroundColor = randomColor;
 
-			ctx.drawImage(t1, 0, 0 , 83.5, 83.5);
-			ctx.drawImage(t2, 81, 0, 83.5, 83.5);
-			ctx.drawImage(b1, 0, 81, 83.5, 166.5);
-			ctx.drawImage(b2, 81, 81, 83.5, 166.5);
+			ctx.drawImage(t1, 0, 0 , 167, 167);
+			ctx.drawImage(t2, 162, 0, 167, 167);
+			ctx.drawImage(b1, 0, 162, 167, 333);
+			ctx.drawImage(b2, 162, 162, 167, 333);
 
 			//give new sources
 			t1.src = "t (" + (Math.floor(Math.random() * 144) + 1)+ ").png";
